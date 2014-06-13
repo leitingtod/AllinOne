@@ -1,0 +1,253 @@
+﻿/* ---------------------------------------------------------------- */
+body {
+	background:rgba(200,200,200,0.1);
+}
+
+*:focus { outline: none; }
+
+/* ---Top------------------------------------------------------------- */
+#top { height: 24px!important; overflow:hidden!important; z-index: 0!important;}
+
+#logo { display: none!important; }
+#topBgRight, #topNav { display: none!important; }
+
+#topSubNav{ float: left; border: solid 0px blue; }
+#topSearch{ 
+    display: none!important; 
+    position: fixed!important;
+    bottom: 4px!important;
+    width: 393px;
+    left: 354px; right: 1%; margin: auto;
+    border: solid 0px blue; 
+    z-index: 10000000; 
+}
+
+#goHome {
+    border: solid 0px blue; 
+    width: 245px;
+}
+
+#main { top: 24px!important; 
+	position:fixed!important;
+    bottom: 0px;
+}
+/* -----------left navigation -------------------------------------*/
+
+#navigation #addSubscribeBtn { 
+    position: fixed!important;
+    top: 24px!important;
+    left: 174px;
+    z-index: 1000;
+    height: 25px!important; width: 68px!important;
+   
+}
+#navigation #addSubscribeBtn  > a { 
+    left: -9px; top: -10px; background-color: transparent;/*#e8f3fb transparent*/ 
+    border: solid 0px blue;
+    width: 56px!important; height: 26px!important; 
+    padding-left: 6px!important; padding-right: 6px!important;
+}
+
+#navigation #addSubscribeBtn span {
+    margin: 0!important; padding: 0!important;
+    background-position: left -11030px;
+    border: solid 0px red; width: 54px;  
+}
+
+#navigation #navigationBottom { 
+	bottom: 0px!important; 
+	position: fixed; 
+	width: 225px!important; 
+	background-color: #e8f3fb!important;
+}
+
+#channelFilterForm { width: 225px!important; }
+
+/*-----------artical list ---------------------------*/
+#homeWelcome, #homeWelcome { display: none!important; }
+
+/*> div { border: 0px solid red; }
+#homeWelcome > div:first-child { width: 210px; float: left; top: 0!important; 
+    font-weight: bold; height: 24px; line-height: 24px;
+}
+#homeWelcome > div:last-child { width: 500px;  float: right;
+    font-size: 12px; height: 20px; line-height: 20px;
+}
+
+#homeWelcome > div:last-child  > div:first-child { display: none!important; }
+*/
+
+/*-----------content left---------------------------
+#contentWrapper {
+	position:fixed!important;
+}*/
+
+#content #contentTitle { 
+    position: fixed;
+    top: -5px;
+    margin-left: 48px;
+    background-color: transparent!important;
+}
+
+#contentFunctionBar { 
+    height: 22px!important; 
+    border: solid 0px red;
+    border-bottom: 1px solid #9FC2E2;
+    padding: 3px 4px 0px 8px!important; 
+}
+
+#contentPageBar {
+    position: fixed!important;
+    margin-left: 2px!important;
+    bottom: 0!important;
+    border-top: 1px dotted #b0bec7;
+    width: 100%!important;
+    z-index: 99999;
+}
+#contentPageBar #pageBar {
+    position: fixed;
+    right: 10px;
+}
+
+#contentContainer { border: 0px solid blue; float: left; 
+    position:fixed!important;
+    top:24px!important;
+    width: 100%!important;
+    height: 96%!important;
+    bottom: 110px!important;
+    margin-left: 2px!important;
+}
+
+#contentContainer > div:nth-child(1) { width: 100%!important; }
+#contentContainer > div:nth-child(2) { display: none!important; }
+#contentContainer > div:nth-child(3) { display: none!important; }
+#contentContainer > div:nth-child(4) { display: none!important; }
+#contentInner { margin: 0!important; }
+#subscribeUpdate { 
+    margin-bottom: 0!important; 
+    border: 0px solid red!important; 
+}
+
+#subscribeUpdate > h3 { border-bottom: 1px solid #9FC2E2; 
+    margin-top: 1px;
+}
+
+#content .cast-content {
+    line-height: 200%!important;
+}
+
+#content .cast-content * {
+    background-color: rgb(204,232,207)!important;
+}
+
+#content .cast-content .mf-viral {
+    display: none!important;
+}
+
+#content .cast-content > a > img {
+    display: none!important;
+}
+
+#content .cast { border-left: 1px solid #9FC2E2; margin-left: 1px;}
+
+#toggleNavigation { top: 0!important; 
+    border-left: 1px solid #9FC2E2!important; 
+    border-right: 1px solid #9FC2E2!important; 
+}
+#contentView { border-left1: 1px solid #9FC2E2; height: -webkit-calc(100% - 56px)!important; }
+
+
+/* 订阅管理 */
+#feedsManage, #opml {     
+    top: 24px!important;
+    position: fixed!important;
+    margin-top: 0!important;
+    border: solid 2px red;
+    height: 95%!important;
+    width: 100%!important;
+    overflow-y: auto!important;
+}
+
+#feedsManage #contentTitle, #opml #contentTitle {
+    top: 28px!important;
+    position: fixed!important;
+    border: solid 0px red;
+    z-index: 1000;
+    background-color: transparent!important;
+    width: 224px!important;
+    right: 1%; left: 1%; margin: auto!important;
+}
+#opml #contentTitle { top: 37px!important; }
+#feedsManage #contentTitle > h2 > small > span { font-size: 16px; font-weight: bold;}
+#opml #contentTitle > h2 > small > span { font-size: 16px; font-weight: bold;}
+#feedsManage #contentTitle > h2 > small > a  { font-size: 16px; font-weight: bold;}
+#opml #contentTitle > h2 > small > a  { font-size: 16px; font-weight: bold;}
+
+#feedsManage  #feedsManageContainer, #opml #ucContainer {
+    border: solid 0px red;
+    margin: 0!important; 
+    height: 100%!important;
+}
+
+#feedsManage .autoLeft, #opml  .autoLeft{
+    position: fixed!important;
+    right: 1%; left: 1%; margin: auto!important; 
+    border: solid 0px red;
+    width: 75%!important;
+    height: 75%!important;
+}
+
+#addWrapper { 
+    margin-left: 1px!important; 
+}
+#addWrapper .addRight { display: none!important; }
+#addWrapper .addLeft { width: 100%!important; }
+
+#searchFeedForm #addSubmit > span > input { 
+    background: none!important;
+    height: 30px!important; 
+}
+
+
+/*背景色*/
+#content, input[type="text"], #navigation, .cast-container,
+.cast-function-bar { 
+	background-color: rgb(204,232,207)!important;
+	/*background-color: #F7FCFF!important;*/
+}
+
+.cast-wrapper, .folders a {
+	border: none!important;
+}
+
+input[type="text"] {
+	border: 1px solid gray;
+	margin-top: 1px;
+}
+
+.addSubmit input { 
+	padding-top: 1px!important; 
+	margin-top: -1px!important; 
+}
+
+
+.cast-function-bar {
+	padding-left: 1.4em!important;
+}
+
+.cast-clip-main {
+	background-color: #e8f3fb!important;
+	border: none!important;
+}
+
+.cast-clip {
+	background-color: #e8f3fb!important;
+}
+
+
+
+
+
+
+
+

@@ -1,4 +1,15 @@
 ﻿{
+    "content_scripts": [{
+        "all_frames": true,
+        "css": ["css/scrollbar.css"],
+        "matches": ["\u003Call_urls\u003E"],
+        "run_at": "document_start"
+    }, {
+        "css": ["css/youdaoreader.css"],
+        "matches": ["http://reader.youdao.com/*"],
+        "run_at": "document_start"
+    }],
+
     "icons": {
         "128": "css/img/icon128.png",
         "64": "css/img/icon64.png",
