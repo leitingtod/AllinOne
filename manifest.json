@@ -2,6 +2,7 @@
     "content_scripts": [{
         "all_frames": true,
         "css": ["css/scrollbar.css"],
+        "js": ["contentscript/gesture.js"],
         "matches": ["\u003Call_urls\u003E"],
         "run_at": "document_start"
     }, {
@@ -9,6 +10,23 @@
         "matches": ["http://reader.youdao.com/*"],
         "run_at": "document_start"
     }],
+
+    "background": {
+        "persistent": false,
+        "scripts": ["background/gesture.js",
+                    "background/background.js"]
+    },
+
+    "permissions": [
+        "tabs",
+        "downloads",
+        "\u003Call_urls\u003E"
+    ],
+
+    "web_accessible_resources": [
+         "contenscript/*",
+         "background/*"
+     ],
 
     "icons": {
         "128": "css/img/icon128.png",
