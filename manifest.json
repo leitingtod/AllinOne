@@ -1,0 +1,15 @@
+﻿{
+    "icons": {
+        "128": "css/img/icon128.png",
+        "64": "css/img/icon64.png",
+        "32": "css/img/icon32.png"
+    },
+
+    "manifest_version": 2,
+
+    "name": "多合一扩展",
+
+    "description": "多合一扩展",
+
+    "version": "2014.6.10"
+}
