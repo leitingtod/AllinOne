@@ -23,15 +23,20 @@
                     "background/background.js"]
     },
 
+    "chrome_url_overrides": {
+        "history": "background/betterhistory/index.html"
+    },
+
     "permissions": [
         "tabs",
         "downloads",
+        "history",
         "\u003Call_urls\u003E"
     ],
 
     "web_accessible_resources": [
-         "contenscript/*",
-         "background/*"
+        "contenscript/*",
+        "background/*"
      ],
 
     "icons": {
@@ -46,5 +51,7 @@
 
     "description": "多合一扩展",
 
-    "version": "2014.6.10"
+    "version": "2014.6.10",
+
+    "default_locale": "en"
 }
