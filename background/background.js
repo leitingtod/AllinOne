@@ -1,6 +1,6 @@
 chrome.extension.onMessage.addListener(
 function (request, sender, sendResponse) {
-    console.log(request);
+    //console.log(request);
     if (!request.type) return;
 
     switch (request.type) {
@@ -15,7 +15,7 @@ function (request, sender, sendResponse) {
             break;
 
         case 'noadplayer':
-            storage.set('noadplayer', 'authorized');
+            storage.set('noadplayer', new Date().getTime());
             break;
     }
 });
@@ -41,9 +41,15 @@ var storage = {
 
 var noadplayer = {
     check: function() {
-        var flag = storage.get('noadplayer');
-        if(flag  && flag === 'authorized')
-            return;
+        var past = new Date();
+        past.setTime(storage.get('noadplayer'));
+        if(past) {
+            var now = new Date();
+            if(past.getYear() == now.getYear())
+                if(past.getMonth() == now.getMonth())
+                    if(past.getDate() == now.getDate())
+                        return;
+        }
         this.getauth();
     },
     getauth: function() {
@@ -58,4 +64,9 @@ var noadplayer = {
     }
 };
 
-window.setTimeout(function() {noadplayer.check(); }, 2000);
+window.setTimeout(function() {
+    noadplayer.check();
+    window.setInterval(function() {
+        noadplayer.check();
+    }, 1000*60*30);
+}, 2000);
