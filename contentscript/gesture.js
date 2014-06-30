@@ -141,7 +141,7 @@ var gesture = {
             case 'RDR':// 关闭左侧标签页
                 action = 'closeLeftTabs';
                 break;
-            case 'LDRU':// 关闭其他标签页
+            case 'LRDR':// 关闭其他标签页
                 action = 'closeOthersTab';
                 break;
             case 'LR':// 重新打开关闭的标签页
@@ -149,6 +149,12 @@ var gesture = {
                 break;
             case 'D':// 固定标签页
                 action = 'togglePinTab';
+                break;
+            case 'LRD':
+                action = 'togglePinAllTab';
+                break;
+            case 'LDRU':
+                action = 'reloadAllTab';
                 break;
         }
         if (action !== '')

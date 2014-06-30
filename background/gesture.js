@@ -45,14 +45,32 @@ var gesture = {
     },
 
     togglePinTab : function (sender) {
-        if (sender.tab.pinned)
-            chrome.tabs.update({
-                pinned : false
-            });
-        else
-            chrome.tabs.update({
-                pinned : true
-            });
+        chrome.tabs.update({
+            pinned : !sender.tab.pinned
+        });
+    },
+
+    togglePinAllTab : function () {
+        getCurrentWindow(function (window) {
+            var tabsUnpinned = 0;
+            for ( var i = 0 in window.curWindow.tabs) {
+                if(!window.curWindow.tabs[i].pinned)
+                    tabsUnpinned++;
+            }
+            for ( var i = 0 in window.curWindow.tabs) {
+                chrome.tabs.update(window.curWindow.tabs[i].id, {pinned: tabsUnpinned>0?true:false});
+            }
+        });
+    },
+
+    reloadAllTab : function() {
+        getCurrentWindow(function (window) {
+            for ( var i = 0 in window.curWindow.tabs) {
+                if (!window.curWindow.tabs[i].highlighted
+                        && (window.curWindow.tabs[i].url.indexOf('chrome://extensions') < 0))
+                    chrome.tabs.reload(window.curWindow.tabs[i].id);
+            }
+        });
     },
 
     reopenClosedTab : function (sender) {
