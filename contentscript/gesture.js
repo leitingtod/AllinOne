@@ -487,8 +487,13 @@ var drag = {
 
     isURL : function (url) {// 验证url
         var re = /^((https|http|ftp|rtsp|mms|chrome):\/\/)?(([0-9a-z_!~*'().&=+$%-]+)(:[0-9a-z_!~*'().&=+$%-]+)?@)?(([0-9]{1,3}\.){3,3}[0-9]{1,3}|([0-9a-z_!~*'()-]+\.)*([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\.[a-z]{2,6})/gi;
-
-        return re.test(url);
+        var suffix = /com|gov|net|org|edu|int|mil|cn|biz|cc|tv|info|name|mobi|travel|pro|coop|aero|museum/gi;
+        if(re.test(url)) {
+            var s = url.split(".");
+            var domain = s.pop();
+            return suffix.test(domain);
+        }
+        return false;
     },
 
     isEmail : function (str) {
