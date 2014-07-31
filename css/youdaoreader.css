@@ -208,6 +208,19 @@ body {
     height: 30px!important; 
 }
 
+/* 关闭导航栏 bar */
+#toggleNavigation {
+    width: 5px!important;
+}
+
+#toggleNavigation .sprite{
+    width: 7px!important;
+    margin-left: -3px;
+}
+
+#contentWrapper {
+    padding-left: 5px!important;
+}
 
 /*背景色*/
 #content, input[type="text"], #navigation, .cast-container,
