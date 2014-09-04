@@ -16,6 +16,7 @@ function (request, sender, sendResponse) {
 
         case 'noadplayer':
             storage.set('noadplayer', new Date().getTime());
+            chrome.tabs.remove(sender.tab.id);
             break;
     }
 });
