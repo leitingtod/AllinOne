@@ -66,6 +66,7 @@ var noadplayer = {
 };
 
 window.setTimeout(function() {
+    return;
     noadplayer.check();
     window.setInterval(function() {
         noadplayer.check();

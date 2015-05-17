@@ -1,4 +1,5 @@
 $(function() {
+    return;
     if(window.location.href
         === 'http://www.noadplayer.com/authorize') {
         $.post( "http://noadplayer.sinaapp.com/checktoken.php",
