@@ -74,11 +74,11 @@ var gesture = {
     },
 
     reopenClosedTab : function (sender) {
-        chrome.sessionRestore.getRecentlyClosed({
+        chrome.sessions.getRecentlyClosed({
             maxResults : 1
         }, function (entrys) {
             console.log(entrys);
-            chrome.sessionRestore.restore(entrys[0].id);
+            chrome.sessions.restore(entrys[0].id);
         });
     }
 

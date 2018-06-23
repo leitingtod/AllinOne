@@ -36,6 +36,7 @@
     "permissions": [
         "tabs",
         "downloads",
+        "sessions",
         "history",
         "management",
         "\u003Call_urls\u003E"
