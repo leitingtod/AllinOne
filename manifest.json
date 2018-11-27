@@ -1,4 +1,30 @@
 ﻿{
+    "content_scripts": [{
+        "all_frames": true,
+        "js": ["gesture/contentscript.js"],
+        "matches": ["\u003Call_urls\u003E"],
+        "run_at": "document_start"
+    }],
+
+    "background": {
+        "persistent": true,
+        "scripts": ["gesture/background.js"]
+    },
+
+    "permissions": [
+        "tabs",
+        "downloads",
+        "sessions",
+        "history",
+        "management",
+        "\u003Call_urls\u003E"
+    ],
+
+    "web_accessible_resources": [
+        "contenscript/*",
+        "background/*"
+    ],
+
     "icons": {
         "128": "css/img/icon128.png",
         "64": "css/img/icon64.png",
@@ -7,7 +33,7 @@
 
     "manifest_version": 2,
 
-    "name": "多合一扩展",
+    "name": "多合一扩展Test",
 
     "description": "多合一扩展",
 
