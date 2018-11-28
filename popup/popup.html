@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href='css/material-icons.css' rel="stylesheet">
+    <link href='css/bootstrap.min.css' rel="stylesheet">
+    <link href='css/bootstrap-vue.css' rel="stylesheet">
+    <style>
+        .avatar {
+            height: 24px;
+            width: 24px;
+            margin: 0 10px 0 0;
+            padding: 0;
+        }
+
+        .vlist-group-item {
+            display: flex;
+            flex-flow: row nowrap;
+            vertical-align: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 0 2px 2px 2px;
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .vlist-group-item div {
+            flex-grow: 10;
+        }
+
+        .status {
+            margin-left: 10px;
+        }
+
+        .toolbar {
+            border: 1px solid rgba(0, 0, 0, .185);
+            margin: 0 2px 2px 2px;
+            padding: 5px 6px 5px 6px;
+            border-radius: .15em .15em 0 0;
+            background-color: dodgerblue;
+        }
+
+        .toolbar i {
+            color: white;
+        }
+
+        .toolbar .btn {
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <b-list-group>
+        <b-button-toolbar class="toolbar" :justify="true">
+            <b-btn variant="outline-primary" v-for="key in Object.keys(visits)" :key="key" @click="open(key)"><i
+                    class="material-icons">{{ visits[key] }}</i></b-btn>
+        </b-button-toolbar>
+
+        <b-list-group-item class="vlist-group-item" v-for="item in extensions" :key="item.id" @click="toggle(item)" button>
+            <img class="avatar" :src="item.icons[0].url"/>
+            <div>{{item.name}}</div>
+            <span><b-badge class="status" :variant="status(item).badge">{{ status(item).status }}</b-badge></span>
+        </b-list-group-item>
+    </b-list-group>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="js/polyfill.min.js"></script>
+<script src="js/bootstrap-vue.js"></script>
+<script src="js/popup.js"></script>
+</body>
+</html>

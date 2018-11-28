@@ -1,4 +1,9 @@
 ﻿{
+    "background": {
+        "persistent": true,
+        "scripts": ["gesture/background.js"]
+    },
+
     "content_scripts": [{
         "all_frames": true,
         "js": ["gesture/contentscript.js"],
@@ -6,9 +11,10 @@
         "run_at": "document_start"
     }],
 
-    "background": {
-        "persistent": true,
-        "scripts": ["gesture/background.js"]
+    "browser_action": {
+        "default_icon": "css/img/icon64.png",
+        "default_title": "多合一扩展",
+        "default_popup": "popup/popup.html"
     },
 
     "permissions": [
@@ -25,11 +31,15 @@
         "background/*"
     ],
 
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
     "icons": {
         "128": "css/img/icon128.png",
         "64": "css/img/icon64.png",
         "32": "css/img/icon32.png"
     },
+
+    "default_locale": "en",
 
     "manifest_version": 2,
 
