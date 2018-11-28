@@ -6,6 +6,7 @@
 
     "content_scripts": [{
         "all_frames": true,
+        "css": ["css/scrollbar.css"],
         "js": ["gesture/contentscript.js"],
         "matches": ["\u003Call_urls\u003E"],
         "run_at": "document_start"

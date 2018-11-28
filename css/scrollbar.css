@@ -1,0 +1,37 @@
+﻿/*body::-webkit-scrollbar{display:none;}
+html::-webkit-scrollbar{display:none;}
+*/
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: white;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #68cf71 /*#666*/;
+    -webkit-border-radius: 20%;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #68cf71;
+    -webkit-border-radius: 20%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ee6e27;
+}
+
+/* no scroll bar
+::-webkit-scrollbar { width:0px; height: 0px; }
+*/
+
+#youdaoGWZS.youdaoGWZS_down {
+    bottom: 50px !important;
+}
+
+/* html, body { background-color: rgb(204, 232, 207)!important; } */
