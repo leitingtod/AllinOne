@@ -16,7 +16,6 @@ function init() {
     chrome.runtime.sendMessage({
         type: 'gesture_config'
     }, function (response) {
-        console.log(response);
         config = response;
     });
 }
@@ -28,7 +27,6 @@ function gesture_action_exec(path) {
         data: state.selected
     });
 }
-
 
 let gesture = {
     'back': function () {
@@ -106,6 +104,7 @@ function mouse_move(e) {
         state.last.x = x;
         state.last.y = y;
     }
+
     return false;
 }
 

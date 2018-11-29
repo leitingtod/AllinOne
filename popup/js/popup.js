@@ -19,9 +19,9 @@ chrome.management.getAll(function (result) {
                 extensions: extensions,
                 statics: enabled.length + '/' + result.length,
                 visits: {
-                    'history': 'history',
+                    'history': 'watch_later',
                     'bookmarks': 'bookmark',
-                    'downloads': 'vertical_align_bottom',
+                    'downloads': 'get_app',
                     'extensions': 'extension',
                     'settings': 'settings'
                 }
@@ -37,7 +37,6 @@ chrome.management.getAll(function (result) {
                 chrome.tabs.getAllInWindow(null, function (tabs) {
                     let prefix = 'chrome://';
                     for (var i = 0; i < tabs.length; i++) {
-                        console.log(tabs[i].url.replace(prefix, '').replace('/', ''), target);
                         if (tabs[i].url.replace(prefix, '').replace('/', '') === target) {
                             chrome.tabs.update(tabs[i].id, {selected: true});
                             window.close();
