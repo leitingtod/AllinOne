@@ -13,17 +13,17 @@ html::-webkit-scrollbar{display:none;}
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    background-color: #68cf71 /*#666*/;
+    background-color: #ee6e27 /*#666*/;
     -webkit-border-radius: 20%;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-    background-color: #68cf71;
+    background-color: #ee6e27;
     -webkit-border-radius: 20%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #ee6e27;
+    background-color: #0776f5;
 }
 
 /* no scroll bar
