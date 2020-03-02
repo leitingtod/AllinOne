@@ -1,9 +1,9 @@
 let config = null;
 
 function init() {
-    window.addEventListener("mousedown", mouse_down, false);
+    window.addEventListener("mousedown", mouse_down, true);
     window.addEventListener("mousemove", mouse_move, false);
-    window.addEventListener("mouseup", mouse_up, false);
+    window.addEventListener("mouseup", mouse_up, true);
     window.addEventListener("contextmenu", context_menu, false);
 
     window.addEventListener('dragstart', drag_start, false);
